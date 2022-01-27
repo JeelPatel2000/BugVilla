@@ -104,6 +104,7 @@ exports.createBug = async (req, res) => {
 
     res.created({ data: newBug });
   } catch (err) {
+    console.error(err);
     res.internalError({
       error: 'Something went wrong while creating new bug',
     });

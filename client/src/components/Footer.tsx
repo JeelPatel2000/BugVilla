@@ -41,13 +41,10 @@ const Footer = () => {
       <Flex className="footer__flex" gap="medium" align="center">
         <span>
           Made with {'<3'} and javascript, by{' '}
-          <a href="https://anuraghazra.github.io/">Anurag Hazra</a>
+          <a href="https://jeel.dev">Jeel Patel</a>
         </span>
-        <a href="https://github.com/anuraghazra/BugVilla">
+        <a href="https://github.com/JeelPatel2000">
           <FontAwesomeIcon icon={['fab', 'github']} />
-        </a>
-        <a href="https://twitter.com/anuraghazra">
-          <FontAwesomeIcon icon={['fab', 'twitter']} />
         </a>
       </Flex>
     </StyledFooter>

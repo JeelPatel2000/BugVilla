@@ -93,7 +93,6 @@
     "mutation-observer": "^1.0.3",
     "react-test-renderer": "^16.13.0",
     "source-map-explorer": "^2.3.1",
-    "start-server-and-test": "^1.10.6",
-    "webpack": "^4.41.5"
+    "start-server-and-test": "^1.10.6"
   }
 }
