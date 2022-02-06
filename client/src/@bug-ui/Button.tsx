@@ -25,7 +25,7 @@ const button_sizes: any = {
   medium: css`
     padding: 10px 15px;
     font-size: 12px;
-  `
+  `,
 };
 
 type IStyledButton = StyledButtonProps & React.HTMLAttributes<HTMLDivElement>;
@@ -90,7 +90,7 @@ export const Button: React.FC<ButtonProps> = ({
 
 const ButtonGroupFloat: any = {
   left: `margin-right: auto;`,
-  right: `margin-left: auto;`
+  right: `margin-left: auto;`,
 };
 export const ButtonGroup = styled(Flex)<{ float?: string }>`
   width: fit-content;
