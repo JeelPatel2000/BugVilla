@@ -4,13 +4,11 @@ WORKDIR /app
 
 COPY package*.json ./
 
-COPY ./client/package*.json ./client/
-
 RUN npm install --only=prod
 
 WORKDIR /app/client
 
-COPY ./client ./client/
+COPY ./client/ ./
 
 RUN npm install 
 
