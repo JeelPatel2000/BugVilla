@@ -6,9 +6,11 @@ COPY package*.json ./
 
 COPY ./client/package*.json ./client/
 
-RUN npm install
+RUN npm install --only=prod
 
 WORKDIR /app/client
+
+RUN npm install --only=prod
 
 RUN npm run build
 
