@@ -10,9 +10,9 @@ RUN npm install --only=prod
 
 WORKDIR /app/client
 
-RUN npm install 
-
 COPY ./client ./client/
+
+RUN npm install 
 
 RUN npm run-script build
 
