@@ -2,11 +2,11 @@ FROM node:14
 
 WORKDIR /app
 
-COPY ./client/package*.json ./
+COPY package*.json ./
 
 RUN npm install
 
-COPY ./client/ ./ 
+COPY . .
 
 RUN npm run-script build
 
