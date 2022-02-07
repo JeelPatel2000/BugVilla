@@ -4,6 +4,8 @@ WORKDIR /app
 
 COPY package*.json ./
 
+COPY ./cypress/ ./cypress/
+
 RUN npm install
 
 COPY . .
