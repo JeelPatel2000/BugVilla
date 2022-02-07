@@ -23,7 +23,7 @@ jobs:
 
       - name: docker build frontent
         run: |
-          docker build ./client/ -t jeelp/bugvilla_fronten
+          docker build ./client/ -t jeelp/bugvilla_frontend
       - name: docker build backend
         run: |
           docker build ./ -t jeelp/bugvilla_backend
