@@ -4,18 +4,10 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
-
-WORKDIR /app/client
-
-COPY ./client/ ./
-
-RUN npm install 
-
-RUN npm run-script build
-
-WORKDIR /app
+RUN npm install --production
 
 COPY . .
 
-CMD ["npm", "run", "prod"]
+EXPOSE 3000
+
+CMD ["npm", "start"]
