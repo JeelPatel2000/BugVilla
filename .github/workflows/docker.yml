@@ -23,9 +23,9 @@ jobs:
 
       - name: docker build
         run: |
-          docker build ./ -t bugvilla
+          docker build ./ -t jeelp/bugvilla
       - name: docker push
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/bugvilla
+        run: docker push jeelp/bugvilla
       
       
           
