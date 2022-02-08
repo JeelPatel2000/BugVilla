@@ -12,8 +12,8 @@ FROM node:14
 WORKDIR /app
 COPY package*.json ./
 RUN npm install --production
-COPY --from=build /app/build ./build
 COPY . .
+COPY --from=build /app/build ./client/build
 EXPOSE 5000
 CMD ["npm", "start"]
 
