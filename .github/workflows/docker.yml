@@ -36,14 +36,6 @@ jobs:
     steps:  
       - name: Deploy to Vultr VPS via SSH action
         uses: appleboy/ssh-action@v0.1.3
-        env: 
-          NODE_ENV: "production"
-          DB_CONNECT_ATLAS: "${{ secrets.DB_CONNECT_ATLAS }}"
-          TOKEN_SECRET: "${{ secrets.TOKEN_SECRET }}"
-          GOOGLE_CLIENT_ID: "${{ secrets.GOOGLE_CLIENT_ID }}"
-          GOOGLE_CLIENT_SECRET: "${{ secrets.GOOGLE_CLIENT_SECRET }}"
-          SENDGRID_API_KEY: "${{ secrets.SENDGRID_API_KEY }}"
-          EXPIRATION_TIME: "${{ secrets.EXPIRATION_TIME }}"
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
@@ -52,5 +44,5 @@ jobs:
           script: |
             docker stop bugvilla
             docker pull jeelp/bugvilla
-            docker run -p 5000:5000 jeelp/bugvilla 
+            docker run -e NODE_ENV="production" -e DB_CONNECT_ATLAS="${{ secrets.DB_CONNECT_ATLAS }}" -e TOKEN_SECRET="${{ secrets.TOKEN_SECRET }}" -e GOOGLE_CLIENT_ID="${{ secrets.GOOGLE_CLIENT_ID }}" -e GOOGLE_CLIENT_SECRET="${{ secrets.GOOGLE_CLIENT_SECRET }}" -e SENDGRID_API_KEY="${{ secrets.SENDGRID_API_KEY }}" -e EXPIRATION_TIME="${{ secrets.EXPIRATION_TIME }}" -p 5000:5000 jeelp/bugvilla 
             
