@@ -66,7 +66,7 @@ exports.signup = async (req, res) => {
     const verificationLink = `http://${req.headers.host}/api/user/verify-email?token=${token.token}`;
     const msg = {
       to: savedUser.email,
-      from: 'bugvilla@gmail.com',
+      from: 'info@bugvilla.jeel.dev',
       subject: 'BugVilla Email Verification',
       templateId: 'd-110786e4fc3e4ce2b216b16e4ae73efd',
       dynamic_template_data: {
