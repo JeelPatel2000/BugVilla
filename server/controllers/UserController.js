@@ -68,11 +68,7 @@ exports.signup = async (req, res) => {
       to: savedUser.email,
       from: 'info@bugvilla.jeel.dev',
       subject: 'BugVilla Email Verification',
-      templateId: 'd-110786e4fc3e4ce2b216b16e4ae73efd',
-      dynamic_template_data: {
-        user: savedUser.name,
-        verification_link: verificationLink,
-      },
+      text: `Verification Link: ${verificationLink}`,
     };
     sgMail.send(msg);
 
